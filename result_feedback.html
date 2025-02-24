@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Result</h1>
+        <p><strong>Prediction Feedback for {{ filename }}:</strong></p>
+        {% if feedback == 'correct' %}
+        <p>The prediction was <strong>correct</strong> for {{ predicted_type }}.</p>
+        {% else %}
+        <p>The prediction was <strong>incorrect</strong> for {{ predicted_type }}.</p>
+        {% endif %}
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Home</a>
+    </div>
+</body>
+</html>
